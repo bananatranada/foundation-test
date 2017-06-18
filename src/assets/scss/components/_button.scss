@@ -1,0 +1,36 @@
+.button {
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .025em;
+  box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+
+  &:hover,
+  &:focus {
+    transform: translateY(-1px);
+    box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+  }
+}
+
+.button.inverse {
+  @extend .button.hollow;
+  border: none !important;
+  background: $white;
+
+  &:hover,
+  &:focus {
+    border: none !important;
+    background: $white;
+  }
+
+  &.disabled,
+  &[disabled] {
+    &,
+    &:hover, &:focus {
+      border: none !important;
+      background: $white;
+    }
+  }
+}
+body {
+  background: pink;
+}
